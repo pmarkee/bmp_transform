@@ -1,5 +1,6 @@
 # BMP conversion
-( SZTE TTIK programtervező informatika, 2017 őszi félév, programozás alapjai tehetséggondozó beanandó feladat #2 (átdolgozva) )
+SZTE TTIK programtervező informatika, 2017 őszi félév, programozás alapjai tehetséggondozó beanandó feladat #2 (átdolgozva)  
+
 This program transforms a .bmp file into shades of grey, red, green, blue, yellow, turqoise or magenta. Only works with 24 bit color depth, windows style bmp files.
 
 ## Usage
@@ -30,7 +31,7 @@ The program will transform the input bmp file to the shade that you chose. If yo
 
 ## How it works
 
-A bmp file consists of 2 (or rather 3) things: a file header, a DIB header, and a bitmap. ( https://en.wikipedia.org/wiki/BMP_file_format#File_structure )  
+A bmp file consists of 2 (or rather 3) things: a file header, a DIB header, and a bitmap. (https://en.wikipedia.org/wiki/BMP_file_format#File_structure)  
 The file header and the DIB header contain information about the file itself, and the content is largely dependent on the application / operating system. See the above link for info.  
 A bitmap is basically just a list of all the pixels that make up the picture. Each pixel is described by a pre-determined number of bytes, usually 3 bites for the 3 colors (blue, green, red). Each line has a so called padding at the end, to make the line length a multiple or 4 bytes.  
 This is a rather easy structure to work with. The whole program consists of a few simple steps:
