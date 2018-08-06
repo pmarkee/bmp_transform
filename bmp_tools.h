@@ -41,4 +41,5 @@ void write_bitmap_file_header(FILE* out, bitmap_file_header header);
 void write_bitmap(FILE* out, bitmap bmap);
 void write_bmp(FILE* in, FILE* out, bmp_file bmp);
 void copy_dib_header(FILE* in, FILE* out, uint32_t offset);
-#endif /* IMAGE_FUNCTIONS_H */
+
+#endif /* BMP_TOOLS_H */

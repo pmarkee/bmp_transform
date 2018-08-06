@@ -11,4 +11,4 @@ void transform_turqoise(bitmap* bmap);
 void transform_yellow(bitmap* bmap);
 void transform_magenta(bitmap* bmap);
 
-#endif
+#endif /* TRANSFORM_TOOLS_H */
