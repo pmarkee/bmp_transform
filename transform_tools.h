@@ -3,12 +3,16 @@
 
 #include "bmp_tools.h"
 
-void transform_grey(bitmap* bmap);
-void transform_red(bitmap* bmap);
-void transform_green(bitmap* bmap);
-void transform_blue(bitmap* bmap);
-void transform_turqoise(bitmap* bmap);
-void transform_yellow(bitmap* bmap);
-void transform_magenta(bitmap* bmap);
+#define TRANSFORM_FUNCTION(color) void color(bitmap* bmap)
+
+/* Color transformation functions. */
+
+void grey(bitmap* bmap);
+void red(bitmap* bmap);
+void green(bitmap* bmap);
+void blue(bitmap* bmap);
+void turqoise(bitmap* bmap);
+void yellow(bitmap* bmap);
+void magenta(bitmap* bmap);
 
 #endif /* TRANSFORM_TOOLS_H */

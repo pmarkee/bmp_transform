@@ -1,4 +1,4 @@
- #include "bmp_tools.h"
+#include "bmp_tools.h"
 #include "transform_tools.h"
 
 /* Macros for iterating the map and setting the color values. */
@@ -23,7 +23,7 @@
 
 /* Color transformation funcions. */
 
-void transform_grey(bitmap* bmap) {
+TRANSFORM_FUNCTION(grey) {
     ITER_MAP (bmap)
     SET_BLUE (bmap, avg)
     SET_GREEN (bmap, avg)
@@ -31,7 +31,7 @@ void transform_grey(bitmap* bmap) {
     ITER_MAP_END ()
 }
 
-void transform_red(bitmap* bmap) {
+TRANSFORM_FUNCTION(red) {
     ITER_MAP (bmap)
     SET_BLUE (bmap, 0)
     SET_GREEN (bmap, 0)
@@ -39,7 +39,7 @@ void transform_red(bitmap* bmap) {
     ITER_MAP_END ()
 }
 
-void transform_green(bitmap* bmap) {
+TRANSFORM_FUNCTION(green) {
     ITER_MAP (bmap)
     SET_BLUE (bmap, 0)
     SET_GREEN (bmap, avg)
@@ -47,7 +47,7 @@ void transform_green(bitmap* bmap) {
     ITER_MAP_END ()
 }
 
-void transform_blue(bitmap* bmap) {
+TRANSFORM_FUNCTION(blue) {
     ITER_MAP (bmap)
     SET_BLUE (bmap, avg)
     SET_GREEN (bmap, 0)
@@ -55,7 +55,7 @@ void transform_blue(bitmap* bmap) {
     ITER_MAP_END ()
 }
 
-void transform_yellow(bitmap* bmap) {
+TRANSFORM_FUNCTION(yellow) {
     ITER_MAP (bmap)
     SET_BLUE (bmap, 0)
     SET_GREEN (bmap, avg)
@@ -63,7 +63,7 @@ void transform_yellow(bitmap* bmap) {
     ITER_MAP_END ()
 }
 
-void transform_turqoise(bitmap* bmap) {
+TRANSFORM_FUNCTION(turqoise) {
     ITER_MAP (bmap)
     SET_BLUE (bmap, avg)
     SET_GREEN (bmap, avg)
@@ -71,7 +71,7 @@ void transform_turqoise(bitmap* bmap) {
     ITER_MAP_END ()
 }
 
-void transform_magenta(bitmap* bmap) {
+TRANSFORM_FUNCTION(magenta) {
     ITER_MAP (bmap)
     SET_BLUE (bmap, avg)
     SET_GREEN( bmap, 0)
