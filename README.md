@@ -3,6 +3,8 @@ SZTE TTIK programtervező informatika, 2017 őszi félév, programozás alapjai 
 
 This program transforms a .bmp file into shades of grey, red, green, blue, yellow, turqoise or magenta. Only works with 24 bit color depth, windows style bmp files.
 
+Also check out the [oxidized version](https://github.com/pmarkee/bmp_transform_rust/)!
+
 ## Usage
 
 ### Building
